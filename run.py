@@ -9,4 +9,5 @@ with flask_app.app_context():
         User.create_user(user='test',
                             email='test@test.com',
                             password='test')
-flask_app.run(ssl_context='adhoc')
+#flask_app.run()
+flask_app.run(ssl_context=('cert.pem', 'key.pem'))

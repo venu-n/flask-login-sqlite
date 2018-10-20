@@ -1,2 +1,1 @@
-web: gunicorn run:flask_app
-Rack: Timeout.timeout = 60
+web: gunicorn run:flask_app --timeout 30
