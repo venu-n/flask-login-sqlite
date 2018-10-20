@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content%}
+<div class="container">
+        <h3> HomePage </h3>
+    <h4 class="text-primary"> Logged-in as {{ current_user.user_name.title() }} </h4>
+</div>
+
+{% endblock content%}

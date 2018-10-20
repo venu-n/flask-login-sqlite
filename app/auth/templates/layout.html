@@ -1,0 +1,44 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+<!DOCTYPE html>
+<html lang="en">
+    {% block head %}
+        <head>
+            <title> FLASK - CRUD</title>
+            <meta charset="UTF-8">
+            <link type=text/css rel=stylesheet href= "{{ url_for('static',filename='bootstrap-4.0.0/css/bootstrap.min.css') }}" />
+            <script type=text/javascript src= "{{ url_for('static',filename='bootstrap-4.0.0/js/bootstrap.min.js') }}"></script>
+        </head>
+    {% endblock head %}
+    <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#">Flask-Login-Example</a>
+
+<ul class="nav">
+
+        {% if current_user.is_authenticated %}
+        <li class="nav-item"> 
+        <a class="nav-link active"  href="{{ url_for('authentication.log_out_user') }}">  LogOut (Logged-in as {{ current_user.user_name.title() }})</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+        <a class="nav-link active" href="{{ url_for('authentication.log_in_user') }}"> LogIn</a>
+    </li>
+    <li class="nav-item">
+            <a class="nav-link active" href="{{ url_for('authentication.register_user') }}"> Register</a>
+        </li>
+        {% endif %}
+</ul>
+</nav>
+
+    {% for message in get_flashed_messages() %}
+        <div class="container alert alert-info">
+            <button type="button" class="close" data-dismiss="alert"></button>
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% block content %} 
+
+    {% endblock content %}
+</body>
+</html>
