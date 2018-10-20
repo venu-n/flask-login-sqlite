@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content%}
+<div class="container">
+        <h3> Sorry, page not found! </h3> <br>
+        <span class="label label-success"> <a href="{{url_for('authentication.log_in_user')}}"> Back to Login</a> </span>
+    </div>
+
+{% endblock content%}

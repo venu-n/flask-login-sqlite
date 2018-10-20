@@ -52,3 +52,7 @@ def log_out_user():
     #session.clear()  
     logout_user()
     return redirect(url_for('authentication.log_in_user'))
+
+@authentication.app_errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
