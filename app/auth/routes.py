@@ -23,7 +23,10 @@ def register_user():
         
     return render_template('registration.html', form=form)
 
-@authentication.route('/', methods=['GET'])
+@authentication.route('/')
+def index():
+    return render_template('index.html')
+
 @authentication.route('/login', methods=['GET','POST'])
 def log_in_user():
     if current_user.is_authenticated:
