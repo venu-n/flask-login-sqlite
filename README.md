@@ -7,4 +7,4 @@
 5) python run.py
 6) Launch 127.0.0.1:5000/register to create new user and login
 
-Note: static files and sqlite database included to get started immediately.
+Note: static files and sqlite database are included to get started immediately.
