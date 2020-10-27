@@ -2,7 +2,7 @@ asn1crypto==0.24.0
 bcrypt==3.1.4
 cffi==1.11.5
 Click==7.0
-cryptography==2.3.1
+cryptography==3.2
 dominate==2.3.4
 Flask==1.0.2
 Flask-Bcrypt==0.7.1
